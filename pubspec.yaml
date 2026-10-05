@@ -1,0 +1,24 @@
+name: japanaut_kit
+description: "Japanaut シリーズ(Japanaut Trip / Food ほか)の共通基盤。アプリ名の設定・13言語・共通訳文・法的文書・プレミアム/通知の設定。"
+version: 0.1.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  shared_preferences: ^2.3.4
+  easy_localization: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/translations/
