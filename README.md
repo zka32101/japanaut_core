@@ -1,1 +1,1 @@
-# japanaut_kit
+# japanaut_core

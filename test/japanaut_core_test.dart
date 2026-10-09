@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:japanaut_kit/japanaut_kit.dart';
+import 'package:japanaut_core/japanaut_core.dart';
 
 const _trip = AppBrand(
   suffix: 'Trip',

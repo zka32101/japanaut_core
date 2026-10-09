@@ -1,4 +1,4 @@
-name: japanaut_kit
+name: japanaut_core
 description: "Japanaut シリーズ(Japanaut Trip / Food ほか)の共通基盤。アプリ名の設定・13言語・共通訳文・法的文書・プレミアム/通知の設定。"
 version: 0.2.0
 publish_to: 'none'
