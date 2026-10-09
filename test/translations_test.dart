@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:japanaut_kit/japanaut_kit.dart';
+import 'package:japanaut_core/japanaut_core.dart';
 
 Set<String> _flatKeys(Map<String, dynamic> m, [String prefix = '']) => {
       for (final e in m.entries)

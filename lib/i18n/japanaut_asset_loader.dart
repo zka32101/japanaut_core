@@ -23,7 +23,7 @@ class JapanautAssetLoader extends AssetLoader {
   const JapanautAssetLoader();
 
   /// キットが同梱する共通訳文のフォルダ。
-  static const commonPath = 'packages/japanaut_kit/assets/translations';
+  static const commonPath = 'packages/japanaut_core/assets/translations';
 
   @override
   Future<Map<String, dynamic>> load(String path, Locale locale) async {
