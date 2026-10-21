@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:japanaut_core/japanaut_core.dart';
+import 'package:showglobe_core/showglobe_core.dart';
 
 const _trip = AppBrand(
   suffix: 'Trip',
@@ -88,9 +88,9 @@ void main() {
     });
   });
 
-  group('JapanautAssetLoader.deepMerge', () {
+  group('ShowglobeAssetLoader.deepMerge', () {
     test('アプリ側の訳文が共通訳文を上書きし、他は残る', () {
-      final merged = JapanautAssetLoader.deepMerge(
+      final merged = ShowglobeAssetLoader.deepMerge(
         {
           'common': {'ok': 'OK', 'cancel': 'Cancel'},
           'auth': {'login': 'Log in'},

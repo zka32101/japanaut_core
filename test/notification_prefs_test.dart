@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:japanaut_core/japanaut_core.dart';
+import 'package:showglobe_core/showglobe_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

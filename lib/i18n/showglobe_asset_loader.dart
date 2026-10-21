@@ -14,16 +14,16 @@ import 'language.dart';
 /// EasyLocalization(
 ///   supportedLocales: [for (final l in Language.values) l.locale],
 ///   path: 'assets/translations',
-///   assetLoader: const JapanautAssetLoader(),
+///   assetLoader: const ShowglobeAssetLoader(),
 ///   fallbackLocale: Language.en.locale,
 ///   child: ...,
 /// )
 /// ```
-class JapanautAssetLoader extends AssetLoader {
-  const JapanautAssetLoader();
+class ShowglobeAssetLoader extends AssetLoader {
+  const ShowglobeAssetLoader();
 
   /// キットが同梱する共通訳文のフォルダ。
-  static const commonPath = 'packages/japanaut_core/assets/translations';
+  static const commonPath = 'packages/showglobe_core/assets/translations';
 
   @override
   Future<Map<String, dynamic>> load(String path, Locale locale) async {
