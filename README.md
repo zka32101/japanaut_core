@@ -1,6 +1,6 @@
-# japanaut_core
+# showglobe_core
 
-Japanaut シリーズ（Trip / Food ほか）の共通基盤。
+Showglobe（世界展開）と Japanaut（日本版）シリーズ（Trip / Food ほか）の共通基盤。旧名 japanaut_core。
 
 - `brand/` アプリ名・色・識別子（`AppBrand`）
 - `i18n/` 13 言語・共通訳文ローダー

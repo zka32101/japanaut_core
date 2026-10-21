@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:japanaut_core/japanaut_core.dart';
+import 'package:showglobe_core/showglobe_core.dart';
 
 const _trip = AppBrand(
   suffix: 'Trip',
@@ -21,8 +21,24 @@ const _food = AppBrand(
   supportEmail: 'support@example.com',
 );
 
+const _globalTrip = AppBrand(
+  suffix: 'Trip',
+  slug: 'trip',
+  packageName: 'com.yourwish.showglobetrip',
+  tagline: 'AI Travel Guide',
+  primaryColor: Color(0xFFE63946),
+  supportEmail: 'support@example.com',
+  series: kGlobalSeriesName,
+);
+
 void main() {
   group('AppBrand', () {
+    test('世界展開はシリーズ名を差し替えられ、日本版は既定のまま', () {
+      expect(_globalTrip.displayName, 'Showglobe Trip');
+      expect(_globalTrip.hashtag, '#ShowglobeTrip');
+      expect(_trip.displayName, 'Japanaut Trip');
+    });
+
     test('シリーズ名とアプリごとの名前を組み合わせる', () {
       expect(_trip.displayName, 'Japanaut Trip');
       expect(_food.displayName, 'Japanaut Food');
@@ -72,9 +88,9 @@ void main() {
     });
   });
 
-  group('JapanautAssetLoader.deepMerge', () {
+  group('ShowglobeAssetLoader.deepMerge', () {
     test('アプリ側の訳文が共通訳文を上書きし、他は残る', () {
-      final merged = JapanautAssetLoader.deepMerge(
+      final merged = ShowglobeAssetLoader.deepMerge(
         {
           'common': {'ok': 'OK', 'cancel': 'Cancel'},
           'auth': {'login': 'Log in'},
