@@ -2,12 +2,16 @@ import 'dart:ui' show Color;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/// Japanaut シリーズ全体の名前（全アプリ共通）。
+/// 日本向けシリーズの名前（既定。既存アプリは変更不要）。
 const String kSeriesName = 'Japanaut';
+
+/// 世界展開（英語版・各国版）のシリーズ名。
+const String kGlobalSeriesName = 'Showglobe';
 
 /// シリーズ内の 1 アプリの「名前・色・識別子」を 1 か所で決める設定。
 ///
 /// 例: `AppBrand(suffix: 'Trip', ...)` なら表示名は「Japanaut Trip」。
+  /// `series: kGlobalSeriesName` を渡せば「Showglobe Trip」。
 /// アプリ名の変更や新アプリ（Food など）の追加は、この設定だけで済むようにする。
 class AppBrand {
   const AppBrand({
@@ -18,7 +22,11 @@ class AppBrand {
     required this.primaryColor,
     required this.supportEmail,
     this.accentColor,
+    this.series = kSeriesName,
   });
+
+  /// シリーズ名。日本版は [kSeriesName]、世界展開は [kGlobalSeriesName]。
+  final String series;
 
   /// アプリごとの名前の後半（Trip / Food …）。
   final String suffix;
@@ -39,7 +47,7 @@ class AppBrand {
   final String supportEmail;
 
   /// 表示名。例: 「Japanaut Trip」。
-  String get displayName => '$kSeriesName $suffix';
+  String get displayName => '$series $suffix';
 
   /// 通知チャンネル ID。
   String get notificationChannelId => '${slug}_default';
@@ -48,7 +56,7 @@ class AppBrand {
   String get notificationChannelName => displayName;
 
   /// SNS 共有で使うハッシュタグ。
-  String get hashtag => '#$kSeriesName$suffix';
+  String get hashtag => '#$series$suffix';
 
   /// Google Play のタイトル上限（30 文字）に収まる「名前: 説明」を作る。
   /// 収まらなければ、説明を省いた表示名だけを返す。
