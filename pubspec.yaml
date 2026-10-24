@@ -1,6 +1,6 @@
 name: showglobe_core
 description: "Showglobe / Japanaut シリーズ(Trip / Food ほか)の共通基盤。アプリ名の設定・13言語・共通訳文・法的文書・プレミアム/通知の設定。"
-version: 0.3.0
+version: 0.4.0
 publish_to: 'none'
 
 environment:
@@ -16,6 +16,8 @@ dependencies:
   purchases_flutter: ^10.2.2
   firebase_messaging: ^15.2.5
   flutter_local_notifications: ^18.0.1
+  share_plus: ^10.1.4
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:

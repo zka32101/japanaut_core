@@ -23,10 +23,15 @@ class AppBrand {
     required this.supportEmail,
     this.accentColor,
     this.series = kSeriesName,
+    this.countryCode,
   });
 
   /// シリーズ名。日本版は [kSeriesName]、世界展開は [kGlobalSeriesName]。
   final String series;
+
+  /// 国コード（ISO 3166-1 alpha-2。例: JP）。共有カードの国コードの札に出す。
+  /// 国を持たないアプリは null。
+  final String? countryCode;
 
   /// アプリごとの名前の後半（Trip / Food …）。
   final String suffix;

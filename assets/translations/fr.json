@@ -78,5 +78,17 @@
     "sign_in_google": "Continuer avec Google",
     "terms_note": "En continuant, vous acceptez les conditions d'utilisation",
     "sign_out": "Se déconnecter"
+  },
+  "share_card": {
+    "day_n": "Jour {}",
+    "spots_n": "{} lieux",
+    "more_n": "+{} autres",
+    "stamp_book": "Carnet de tampons",
+    "progress": "{} / {}",
+    "year_title": "Bilan {}",
+    "visited_spots": "Lieux",
+    "visited_regions": "Régions",
+    "busiest_month": "Mois le plus actif",
+    "month_n": "Mois {}"
   }
 }
