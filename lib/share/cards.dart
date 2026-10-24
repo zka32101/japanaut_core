@@ -166,6 +166,102 @@ class _SpotRow extends StatelessWidget {
   }
 }
 
+// ── 写真 + 解説（AI レンズなど） ─────────────────────────────────────────
+
+/// 写真と短い解説のカード。AI レンズの結果、名所の紹介など。
+///
+/// [highlight]（例: 現地で使える一言）は下に目立たせて出す。[highlightSub] はその訳。
+class PhotoShareCard extends StatelessWidget {
+  const PhotoShareCard({
+    super.key,
+    required this.style,
+    required this.brand,
+    required this.title,
+    required this.photo,
+    required this.body,
+    this.subtitle,
+    this.highlight,
+    this.highlightSub,
+  });
+
+  final CardFrameStyle style;
+  final AppBrand brand;
+  final String title;
+  final String? subtitle;
+  final ImageProvider photo;
+  final String body;
+  final String? highlight;
+  final String? highlightSub;
+
+  @override
+  Widget build(BuildContext context) {
+    final accent = style.gradient(brand.primaryColor).last;
+    final hl = highlight;
+    final sub = highlightSub;
+    return ShareCardFrame(
+      style: style,
+      brand: brand,
+      title: title,
+      subtitle: subtitle,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: SizedBox(
+              height: 160,
+              width: double.infinity,
+              child: Image(
+                image: photo,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) =>
+                    ColoredBox(color: accent.withValues(alpha: 0.15)),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          Expanded(
+            child: Text(
+              body,
+              maxLines: 6,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 13, height: 1.4, color: _ink),
+            ),
+          ),
+          if (hl != null && hl.isNotEmpty)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: accent.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    hl,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
+                  if (sub != null && sub.isNotEmpty)
+                    Text(
+                      sub,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 12, color: _muted),
+                    ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
 // ── スタンプ帳 / 地域マップ ──────────────────────────────────────────────
 
 /// 行った地域を色づけたタイルマップ + 最近押したスタンプ。

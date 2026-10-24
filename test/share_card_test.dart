@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:showglobe_core/showglobe_core.dart';
@@ -101,6 +103,33 @@ void main() {
     expect(find.text('Spot C3'), findsOneWidget);
     expect(find.text('Spot C4'), findsNothing);
     expect(find.text('+6 more'), findsOneWidget);
+  });
+
+  testWidgets('PhotoShareCard shows title, body and the highlighted phrase',
+      (t) async {
+    // 1x1 transparent PNG.
+    final png = MemoryImage(Uint8List.fromList(const [
+      0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0x00, 0x00, 0x00, 0x0D,
+      0x49, 0x48, 0x44, 0x52, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
+      0x08, 0x06, 0x00, 0x00, 0x00, 0x1F, 0x15, 0xC4, 0x89, 0x00, 0x00, 0x00,
+      0x0D, 0x49, 0x44, 0x41, 0x54, 0x78, 0x9C, 0x63, 0xF8, 0xFF, 0xFF, 0x3F,
+      0x00, 0x05, 0xFE, 0x02, 0xFE, 0xA7, 0x35, 0x81, 0x84, 0x00, 0x00, 0x00,
+      0x00, 0x49, 0x45, 0x4E, 0x44, 0xAE, 0x42, 0x60, 0x82,
+    ]));
+    await t.pumpWidget(_host(PhotoShareCard(
+      style: CardFrameStyle.classic,
+      brand: _brand,
+      title: 'Fushimi Inari',
+      subtitle: 'AI Lens',
+      photo: png,
+      body: 'Thousands of torii gates.',
+      highlight: 'ありがとう',
+      highlightSub: 'Thank you',
+    )));
+    expect(find.text('Fushimi Inari'), findsOneWidget);
+    expect(find.text('Thousands of torii gates.'), findsOneWidget);
+    expect(find.text('ありがとう'), findsOneWidget);
+    expect(find.text('Thank you'), findsOneWidget);
   });
 
   testWidgets('StampBookShareCard shows progress and the newest stamps',
