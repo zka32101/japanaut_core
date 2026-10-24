@@ -178,4 +178,17 @@ void main() {
     await t.pumpAndSettle();
     expect(find.text('style:snow'), findsOneWidget);
   });
+
+  testWidgets('a very long title does not overflow the header', (t) async {
+    await t.pumpWidget(_host(ShareCardFrame(
+      style: CardFrameStyle.classic,
+      brand: _brand,
+      title: 'とても長いタイトル ' * 12,
+      subtitle: 'AI Lens',
+      child: const SizedBox(),
+    )));
+    expect(tester(t), isNull); // no exception was thrown while laying out
+  });
 }
+
+Object? tester(WidgetTester t) => t.takeException();

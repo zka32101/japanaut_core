@@ -123,14 +123,18 @@ class ShareCardFrame extends StatelessWidget {
                                     style: const TextStyle(
                                         fontSize: 12, color: Colors.white70),
                                   ),
-                                Text(
-                                  title,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    fontSize: 22,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                // Flexible: 長い題名や行の高い言語（日本語など）でも、
+                                // 残りの高さに収めて切る（はみ出しエラーにしない）。
+                                Flexible(
+                                  child: Text(
+                                    title,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ],
