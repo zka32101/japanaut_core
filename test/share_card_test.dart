@@ -97,10 +97,10 @@ void main() {
     expect(find.text('Day 1'), findsOneWidget);
     expect(find.text('Day 2'), findsOneWidget);
     expect(find.text('Spot A — early'), findsOneWidget);
-    // 9 rows max: 2 headers + 7 spots → 5 of day 2 are shown, the rest folded.
-    expect(find.text('Spot C4'), findsOneWidget);
-    expect(find.text('Spot C5'), findsNothing);
-    expect(find.text('+5 more'), findsOneWidget);
+    // 8 rows max: 2 headers + 6 spots → 4 of day 2 are shown, the rest folded.
+    expect(find.text('Spot C3'), findsOneWidget);
+    expect(find.text('Spot C4'), findsNothing);
+    expect(find.text('+6 more'), findsOneWidget);
   });
 
   testWidgets('StampBookShareCard shows progress and the newest stamps',

@@ -41,7 +41,7 @@ class TripShareCard extends StatelessWidget {
   });
 
   /// カードに並べる行（日の見出しも 1 行と数える）の上限。
-  static const maxRows = 9;
+  static const maxRows = 8;
 
   final CardFrameStyle style;
   final AppBrand brand;
@@ -82,7 +82,10 @@ class TripShareCard extends StatelessWidget {
       brand: brand,
       title: title,
       subtitle: ShareCardLabels.fill(labels.spotsN, [total]),
-      child: Column(
+      // 万一はみ出しても描画エラーにせず、スクロールさせずに切る。
+      child: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ...rows,
@@ -95,6 +98,7 @@ class TripShareCard extends StatelessWidget {
               ),
             ),
         ],
+        ),
       ),
     );
   }
