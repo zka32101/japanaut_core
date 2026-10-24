@@ -78,5 +78,17 @@
     "sign_in_google": "المتابعة باستخدام Google",
     "terms_note": "بالمتابعة، أنت توافق على شروط الخدمة",
     "sign_out": "تسجيل الخروج"
+  },
+  "share_card": {
+    "day_n": "اليوم {}",
+    "spots_n": "{} أماكن",
+    "more_n": "+{} أخرى",
+    "stamp_book": "دفتر الأختام",
+    "progress": "{} / {}",
+    "year_title": "ملخص {}",
+    "visited_spots": "الأماكن",
+    "visited_regions": "المناطق",
+    "busiest_month": "أكثر الشهور نشاطًا",
+    "month_n": "الشهر {}"
   }
 }

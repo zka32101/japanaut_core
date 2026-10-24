@@ -78,5 +78,17 @@
     "sign_in_google": "Tiếp tục với Google",
     "terms_note": "Bằng cách tiếp tục, bạn đồng ý với Điều khoản Dịch vụ",
     "sign_out": "Đăng xuất"
+  },
+  "share_card": {
+    "day_n": "Ngày {}",
+    "spots_n": "{} địa điểm",
+    "more_n": "+{} nữa",
+    "stamp_book": "Sổ tem",
+    "progress": "{} / {}",
+    "year_title": "Nhìn lại {}",
+    "visited_spots": "Địa điểm",
+    "visited_regions": "Khu vực",
+    "busiest_month": "Tháng nhiều nhất",
+    "month_n": "Tháng {}"
   }
 }

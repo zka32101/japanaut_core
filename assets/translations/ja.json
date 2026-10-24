@@ -78,5 +78,17 @@
     "sign_in_google": "Googleで続ける",
     "terms_note": "続けることで利用規約に同意したことになります",
     "sign_out": "サインアウト"
+  },
+  "share_card": {
+    "day_n": "{}日目",
+    "spots_n": "{}スポット",
+    "more_n": "ほか{}件",
+    "stamp_book": "スタンプ帳",
+    "progress": "{} / {}",
+    "year_title": "{}年のまとめ",
+    "visited_spots": "訪れた場所",
+    "visited_regions": "訪れた地域",
+    "busiest_month": "いちばん多い月",
+    "month_n": "{}月"
   }
 }

@@ -78,5 +78,17 @@
     "sign_in_google": "Continuar con Google",
     "terms_note": "Al continuar, aceptas las Condiciones del Servicio",
     "sign_out": "Cerrar sesión"
+  },
+  "share_card": {
+    "day_n": "Día {}",
+    "spots_n": "{} lugares",
+    "more_n": "+{} más",
+    "stamp_book": "Álbum de sellos",
+    "progress": "{} / {}",
+    "year_title": "Resumen de {}",
+    "visited_spots": "Lugares",
+    "visited_regions": "Regiones",
+    "busiest_month": "Mes con más visitas",
+    "month_n": "Mes {}"
   }
 }

@@ -78,5 +78,17 @@
     "sign_in_google": "Google के साथ जारी रखें",
     "terms_note": "जारी रखकर, आप सेवा की शर्तों से सहमत होते हैं",
     "sign_out": "साइन आउट करें"
+  },
+  "share_card": {
+    "day_n": "दिन {}",
+    "spots_n": "{} स्थान",
+    "more_n": "+{} और",
+    "stamp_book": "स्टैम्प बुक",
+    "progress": "{} / {}",
+    "year_title": "{} की झलक",
+    "visited_spots": "स्थान",
+    "visited_regions": "क्षेत्र",
+    "busiest_month": "सबसे व्यस्त माह",
+    "month_n": "माह {}"
   }
 }

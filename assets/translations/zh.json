@@ -78,5 +78,17 @@
     "sign_in_google": "使用 Google 继续",
     "terms_note": "继续操作即表示您同意使用条款",
     "sign_out": "退出登录"
+  },
+  "share_card": {
+    "day_n": "第{}天",
+    "spots_n": "{}个景点",
+    "more_n": "另有{}个",
+    "stamp_book": "印章册",
+    "progress": "{} / {}",
+    "year_title": "{}年回顾",
+    "visited_spots": "去过的地方",
+    "visited_regions": "去过的地区",
+    "busiest_month": "最多的月份",
+    "month_n": "{}月"
   }
 }

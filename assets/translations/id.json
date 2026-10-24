@@ -78,5 +78,17 @@
     "sign_in_google": "Lanjutkan dengan Google",
     "terms_note": "Dengan melanjutkan, Anda menyetujui Ketentuan Layanan",
     "sign_out": "Keluar"
+  },
+  "share_card": {
+    "day_n": "Hari {}",
+    "spots_n": "{} tempat",
+    "more_n": "+{} lagi",
+    "stamp_book": "Buku Stempel",
+    "progress": "{} / {}",
+    "year_title": "Ringkasan {}",
+    "visited_spots": "Tempat",
+    "visited_regions": "Wilayah",
+    "busiest_month": "Bulan tersibuk",
+    "month_n": "Bulan {}"
   }
 }

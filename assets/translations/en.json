@@ -78,5 +78,17 @@
     "sign_in_google": "Continue with Google",
     "terms_note": "By continuing, you agree to the Terms of Service",
     "sign_out": "Sign Out"
+  },
+  "share_card": {
+    "day_n": "Day {}",
+    "spots_n": "{} spots",
+    "more_n": "+{} more",
+    "stamp_book": "Stamp Book",
+    "progress": "{} / {}",
+    "year_title": "{} in review",
+    "visited_spots": "Spots",
+    "visited_regions": "Regions",
+    "busiest_month": "Busiest month",
+    "month_n": "Month {}"
   }
 }

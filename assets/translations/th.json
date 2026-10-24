@@ -78,5 +78,17 @@
     "sign_in_google": "ดำเนินการต่อด้วย Google",
     "terms_note": "การดำเนินการต่อแสดงว่าคุณยอมรับข้อกำหนดในการให้บริการ",
     "sign_out": "ออกจากระบบ"
+  },
+  "share_card": {
+    "day_n": "วันที่ {}",
+    "spots_n": "{} สถานที่",
+    "more_n": "อีก {}",
+    "stamp_book": "สมุดแสตมป์",
+    "progress": "{} / {}",
+    "year_title": "สรุปปี {}",
+    "visited_spots": "สถานที่",
+    "visited_regions": "พื้นที่",
+    "busiest_month": "เดือนที่ไปมากสุด",
+    "month_n": "เดือนที่ {}"
   }
 }
