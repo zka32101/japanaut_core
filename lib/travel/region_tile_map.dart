@@ -74,15 +74,18 @@ class _Tile extends StatelessWidget {
         borderRadius: BorderRadius.circular(4),
       ),
       child: Center(
-        child: Text(
-          label,
-          maxLines: 1,
-          overflow: TextOverflow.clip,
-          style: TextStyle(
-            fontSize: fontSize,
-            height: 1,
-            fontWeight: visited ? FontWeight.bold : FontWeight.normal,
-            color: visited ? Colors.white : const Color(0xFF8A867F),
+        // 3 文字の県名（北海道・神奈川など）もタイル幅に収まるよう縮める。
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            label,
+            maxLines: 1,
+            style: TextStyle(
+              fontSize: fontSize,
+              height: 1,
+              fontWeight: visited ? FontWeight.bold : FontWeight.normal,
+              color: visited ? Colors.white : const Color(0xFF8A867F),
+            ),
           ),
         ),
       ),
